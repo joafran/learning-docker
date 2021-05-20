@@ -13,5 +13,8 @@ RUN npm install
 # Copying the files from /src to /app
 COPY . .
 
-# Command to run the project
-CMD ["npm","run","start:prod"]
+# Command to build the /dist folder (babel)
+RUN npm run build
+
+# Command to build the project
+CMD ["npm","start"]
